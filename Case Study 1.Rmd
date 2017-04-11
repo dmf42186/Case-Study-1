@@ -5,10 +5,6 @@ date: "April 10, 2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 #Introduction
 
 The main purpose of this analysis is to show how the distribution of GDP level changes with respect to a country's income classification (Low Income, Lower Middle Income, 
@@ -53,13 +49,13 @@ Education_GDP <- merge(Education, GDP, by="CountryCode")
 ```
 224 of the Country Codes are found in both the Education and GDP data sets.
 
-#Merged Data Set Sorted in Ascending Order by GDP.
+#Merged Data Set Sorted in Ascending Order by GDP
 ```{r}
 Education_GDP <- Education_GDP[order(Education_GDP$GDP),]
 ```
 St. Kitts and Nevis is the 13th country in the Education_GDP data set sorted ascending by GDP.
 
-#Average GDP rankings for the "High income: OECD" and "High income:nonOECD" Groups
+ 
 ```{r}
 summary(subset(Education_GDP, Education_GDP$Income.Group == "High income: nonOECD")$Ranking)
 ```
@@ -81,7 +77,7 @@ main="Distribution of GDP by Income Group", xlab="GDP", ylab="Density", xlim = c
 
 From the plot above, countries in the Lower Middle Income group are more likely to have a GDP of less than $100 billion than other income groups.  High Income: OECD countries are generally the most likely to have a GDP greater than $125 billion.  However, Lower Middle Income countries are more likely to have a GDP between approximately $850 billion and $900 billion than other income groups.  Also, High Income:nonOECD countries are more likely to have a GDP of less than $100 billion than Upper middle income countries.
 
-#Summary statistics for GDP by each of the five income groups.
+#Summary Statistics for GDP by Each of the Five Income Groups.
 ```{r}
 summary(subset(Education_GDP, Education_GDP$Income.Group == "High income: nonOECD")$GDP)
 summary(subset(Education_GDP, Education_GDP$Income.Group == "High income: OECD")$GDP)
@@ -112,4 +108,4 @@ There are five (5) Lower Middle Income countries that are in the highest GDP ran
 #Conclusion
 
 As seen from the analyses above, as one would expect, a nation's GDP tends to be positively related with the income level of its inhabitants.  However, there are a couple of exceptions to this rule.  First, Lower Middle Income countries, which normally have GDP's lower than $100 billion, occupy a higher proportion of nations with GDP's between approximately $850 billion and $900 billion than any other income group.  This fact is borne out in both the density plot of GDP level by income group and the contingency table
-of income group by GDP ranking quantile.  Second, a large proportion of High Income:nonOECD countries have a GDP of less than $100 billion, greater than that of Upper Middle Income countries and second only to Lower Middle Income nations.  This is corroborated by the fact that High Income:nonOECD countries have a lower median GDP than Upper Middle Income countries.
+of income group by GDP ranking quintile.  Second, a large proportion of High Income:nonOECD countries have a GDP of less than $100 billion, greater than that of Upper Middle Income countries and second only to Lower Middle Income nations.  This is corroborated by the fact that High Income:nonOECD countries have a lower median GDP than Upper Middle Income countries.
