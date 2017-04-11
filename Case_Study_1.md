@@ -92,12 +92,6 @@ The average GDP ranking for High income:OECD countries is 32.97.
 
 # Density Plot of GDP by Income Group
 
-```r
-Education_GDP_Countries_Only <- subset(Education_GDP, Education_GDP$Ranking != "NA") #Creating data frame that only includes specific countries on each row, not aggregate groups
-qplot(GDP, data=Education_GDP_Countries_Only, geom="density", fill=Income.Group, alpha=I(.5), 
-main="Distribution of GDP by Income Group", xlab="GDP", ylab="Density", xlim = c(0,1000000), ylim = c(0,0.00001))
-```
-
 ```
 ## Warning: Removed 15 rows containing non-finite values (stat_density).
 ```
