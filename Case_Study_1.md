@@ -1,4 +1,4 @@
-# Case Study 1
+# The Association of GDP and Income Around the World
 Dan Freeman  
 April 10, 2017  
 
