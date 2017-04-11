@@ -2,7 +2,9 @@
 title: "Case Study 1"
 author: "Dan Freeman"
 date: "April 10, 2017"
-output: html_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 #Introduction
