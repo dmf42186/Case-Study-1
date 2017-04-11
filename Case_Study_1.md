@@ -98,10 +98,6 @@ qplot(GDP, data=Education_GDP_Countries_Only, geom="density", fill=Income.Group,
 main="Distribution of GDP by Income Group", xlab="GDP", ylab="Density", xlim = c(0,1000000), ylim = c(0,0.00001))
 ```
 
-```
-## Warning: Removed 15 rows containing non-finite values (stat_density).
-```
-
 ![](Case_Study_1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 From the plot above, countries in the Lower Middle Income group are more likely to have a GDP of less than $100 billion than other income groups.  High Income: OECD countries are generally the most likely to have a GDP greater than $125 billion.  However, Lower Middle Income countries are more likely to have a GDP between approximately $850 billion and $900 billion than other income groups.  Also, High Income:nonOECD countries are more likely to have a GDP of less than $100 billion than Upper middle income countries.
