@@ -16,9 +16,6 @@ summary(subset(Education_GDP, Education_GDP$Income.Group == "High income: OECD")
 
 #Density plot of GDP by income group
 
-install.packages("ggplot2")
-library(ggplot2)
-
 Education_GDP_Countries_Only <- subset(Education_GDP, Education_GDP$Ranking != "NA") #Creating data frame that only includes specific countries on each row, not aggregate 
 #groups
 qplot(GDP, data=Education_GDP_Countries_Only, geom="density", fill=Income.Group, alpha=I(.5), 
