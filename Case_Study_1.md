@@ -91,13 +91,6 @@ summary(subset(Education_GDP, Education_GDP$Income.Group == "High income: OECD")
 The average GDP ranking for High income:OECD countries is 32.97. 
 
 # Density Plot of GDP by Income Group
-
-```r
-Education_GDP_Countries_Only <- subset(Education_GDP, Education_GDP$Ranking != "NA") #Creating data frame that only includes specific countries on each row, not aggregate groups
-qplot(GDP, data=Education_GDP_Countries_Only, geom="density", fill=Income.Group, alpha=I(.5), 
-main="Distribution of GDP by Income Group", xlab="GDP", ylab="Density", xlim = c(0,1000000), ylim = c(0,0.00001))
-```
-
 ![](Case_Study_1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 From the plot above, countries in the Lower Middle Income group are more likely to have a GDP of less than $100 billion than other income groups.  High Income: OECD countries are generally the most likely to have a GDP greater than $125 billion.  However, Lower Middle Income countries are more likely to have a GDP between approximately $850 billion and $900 billion than other income groups.  Also, High Income:nonOECD countries are more likely to have a GDP of less than $100 billion than Upper middle income countries.
